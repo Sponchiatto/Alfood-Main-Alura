@@ -22,10 +22,10 @@ const AdministracaoPratos = () => {
 
   const excluir = (pratoAhSerExcluido: IPrato) => {
     http.delete(`pratos/${pratoAhSerExcluido.id}/`).then(() => {
-      const listaRestaurante = pratos.filter(
-        (restaurante) => restaurante.id !== pratoAhSerExcluido.id
+      const listaPratos = pratos.filter(
+        (prato) => prato.id !== pratoAhSerExcluido.id
       );
-      setPratos([...listaRestaurante]);
+      setPratos([...listaPratos]);
     });
   };
 
